@@ -13,6 +13,8 @@ fi
 if hash pacman 2> /dev/null
 then
   sudo pacman -S fd ripgrep npm nodejs unzip cmake python-virtualenv pkgconf
+  sudo npm install -g npm
+  sudo npm install -g n
   sudo n lts
   sudo n latest
   hash -r
