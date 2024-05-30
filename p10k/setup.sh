@@ -28,8 +28,13 @@ fi
 echo "[o] Moving p10k config to home folder" 
 cp p10k.zsh $HOME/.p10k.zsh
 
+echo "[o] Adding automatic loading of p10k custom theme"
+echo "# This automatically loads the powerlevel10k theme" >> $HOME/.zshrc
+echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> $HOME/.zshrc
+
 echo "[o] Disabling p10k configuration wizard" 
-echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
+echo "# This disables the configuration wizard of powerlevel10k from loading" >> $HOME/.zshrc
+echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> $HOME/.zshrc
 
 echo "[o] Finished installing p10k."
 zsh -c "source $HOME/.p10k.zsh"
