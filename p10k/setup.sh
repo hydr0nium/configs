@@ -4,7 +4,7 @@ echo -n "[o] Do you want to install the p10k config? [y/n] "
 read userinput
 if [[ $userinput != "y" && $userinout != "Y" ]]; then
 
-        echo "[o] Abord"
+        echo "[o] Abort"
         exit
 fi 
 
@@ -28,6 +28,8 @@ if [[ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]]; then
 fi 
 echo "[o] Changing theme to powerlevel10k in .zshrc"
 sed -n 's/ZSH_THEME="robbyrussel"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc
+echo "[o] Adding sourcing powerlevel10k theme to .zshrc" 
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 echo "[o] Finished installing p10k" 
 
