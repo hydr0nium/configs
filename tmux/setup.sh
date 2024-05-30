@@ -26,7 +26,7 @@ fi
 	
 
 if hash pacman 2> /dev/null; then
-	echo [o] Detected pacman package manager"
+	echo [o] "Detected pacman package manager"
 	sudo pacman -S tmux git
 fi 
 
@@ -34,7 +34,7 @@ fi
 echo "[o] Installing tmux package manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-echo "[o] Moving config file into .config/tmux/
-mv ./tmux.conf $HOME/.config/tmux/
+echo "[o] Moving config file into .config/tmux/"
+cp ./tmux.conf $HOME/.config/tmux/
 
 echo "[o] Finished installing tmux"
