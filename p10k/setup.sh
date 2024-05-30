@@ -22,7 +22,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 if [[ $(grep ZSH_THEME=\" $HOME/.zshrc) != 'ZSH_THEME="powerlevel10k/powerlevel10k"' ]]; then
 	echo "[o] Setting theme in .zshrc" 
-	sed 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc > $HOME/.zshrc
+	sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc > $HOME/.zshrc
 fi
 
 echo "[o] Moving p10k config to home folder" 
