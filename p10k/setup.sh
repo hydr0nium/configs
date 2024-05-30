@@ -37,7 +37,7 @@ echo "# This disables the configuration wizard of powerlevel10k from loading" >>
 echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> $HOME/.zshrc
 
 echo "[o] Finished installing p10k."
-zsh -c "source $HOME/.p10k.zsh"
+echo "[o] Please restart your terminal"
 
 
 
