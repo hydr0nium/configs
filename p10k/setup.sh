@@ -19,15 +19,16 @@ fi
 echo "[o] Installing p10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "[o] Moving p10k config to home folder" 
-cp p10k.zsh $HOME/.p10k.zsh
 
 if [[ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]]; then
-	echo "[o] ZSH_THEME env variable not found exporting it into .zshrc" 
-	echo 'export ZSH_THEME="powerlevel10k/powerlevel10k"' >> $HOME/.zshrc
-fi 
-echo "[o] Changing theme to powerlevel10k in .zshrc"
-sed -n 's/ZSH_THEME="robbyrussel"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc
+	echo "[o] Settomg theme in .zshrc" 
+	sed -n 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc
+fi
+
+source $HOME/.zshrc
+
+echo "[o] Moving p10k config to home folder" 
+cp p10k.zsh $HOME/.p10k.zsh
 
 echo "[o] Finished installing p10k" 
 
