@@ -56,7 +56,7 @@ fi
 echo "[o] Installing catppuccin theme for alacritty"
 curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
 
-echo "[o] Moving config file into .config/alacritty
+echo "[o] Moving config file into .config/alacritty"
 mv ./alacritty.toml $HOME/.config/alacritty
 
 echo "[o] Finished installing alacritty"
