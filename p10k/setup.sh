@@ -20,7 +20,7 @@ echo "[o] Installing p10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 
-if [[ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]]; then
+if [[ $(grep ZSH_THEME=\" $HOME/.zshrc) != 'ZSH_THEME="powerlevel10k/powerlevel10k"' ]]; then
 	echo "[o] Setting theme in .zshrc" 
 	sed -n 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc > $HOME/.zshrc
 fi
