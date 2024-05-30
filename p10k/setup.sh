@@ -29,11 +29,10 @@ echo "[o] Moving p10k config to home folder"
 cp p10k.zsh $HOME/.p10k.zsh
 
 echo "[o] Disabling p10k configuration wizard" 
-echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >>! ~/.zshrc
+echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 
 echo "[o] Finished installing p10k."
-echo "[o] Please restart your terminal" 
-
+zsh -c "source $HOME/.p10k.zsh"
 
 
 
