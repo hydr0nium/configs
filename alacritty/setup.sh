@@ -22,13 +22,13 @@ fi
 
 echo "[o] Installing alacritty terminal" 
 
-if hash apt 2> /dev/null
+if hash apt 2> /dev/null; then
 	echo "[o] Detected apt package manager"
 	sudo apt install alacritty curl
 
 fi 
 
-if hash pacman 2> /dev/null
+if hash pacman 2> /dev/null; then
 	echo "[o] Detected pacman package manager"
 	sudo pacman -S alacritty curl
 

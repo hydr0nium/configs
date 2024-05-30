@@ -10,13 +10,13 @@ fi
 
 echo "[o] Installing zsh shell"
 
-if hash apt 2> /dev/null
+if hash apt 2> /dev/null; then
         echo "[o] Detected apt package manager"
         sudo apt install zsh curl
 
 fi
 
-if hash pacman 2> /dev/null
+if hash pacman 2> /dev/null; then
         echo "[o] Detected pacman package manager"
         sudo pacman -S zsh curl
 

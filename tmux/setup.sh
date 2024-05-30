@@ -19,13 +19,13 @@ if ! [[ -d "$HOME/.config/tmux" ]]; then
 fi 
 
 echo "[o] Installing tmux package manager"
-if hash apt 2> /dev/null
+if hash apt 2> /dev/null; then
 	echo "[o] Detected apt package manager" 
 	sudo apt install tmux git
 fi 
 	
 
-if hash pacman 2> /dev/null
+if hash pacman 2> /dev/null; then
 	echo [o] Detected pacman package manager"
 	sudo pacman -S tmux git
 fi 
