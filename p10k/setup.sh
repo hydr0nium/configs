@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n "[o] Do you want to install the alacritty config? [y/n] "
+echo -n "[o] Do you want to install the p10k config? [y/n] "
 read userinput
 if [[ $userinput != "y" && $userinout != "Y" ]]; then
 
@@ -22,7 +22,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo "[o] Moving p10k config to home folder" 
 cp p10k.zsh $HOME/.p10k.zsh
 
-if [[ "$ZSH_THEME" != "powerlevel10k/powerlevel10k"]]; then
+if [[ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]]; then
 	echo "ZSH_THEME env variable not found exporting it into .zshrc" 
 	echo 'export ZSH_THEME="powerlevel10k/powerlevel10k"' >> $HOME/.zshrc
 fi 
