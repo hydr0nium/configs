@@ -24,13 +24,13 @@ echo "[o] Installing alacritty terminal"
 
 if hash apt 2> /dev/null; then
 	echo "[o] Detected apt package manager"
-	sudo apt install alacritty curl
+	sudo apt install alacritty wget
 
 fi 
 
 if hash pacman 2> /dev/null; then
 	echo "[o] Detected pacman package manager"
-	sudo pacman -S alacritty curl
+	sudo pacman -S alacritty wget
 
 fi
 
@@ -44,10 +44,10 @@ fi
 
 if ! [[ -f "$HOME/.local/share/fonts/MesloLGS NF Regular.ttf" ]]; then
 	echo "[o] Downloading nerdfonts"
-	curl -LO --output-dir $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-	curl -LO --output-dir $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-	curl -LO --output-dir $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-	curl -LO --output-dir $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+	wget -P $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+	wget -P $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+	wget -P $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+	wget -P $HOME/.local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 	echo "[o] Reloading font cache"
 	fc-cache -f
 fi 
