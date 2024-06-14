@@ -13,7 +13,6 @@ ZSH_TMUX_AUTOSTART=true
 # Autostart Tmux
 export ZSH_TMUX_AUTOSTART=true
 
->>>>>>> f14f446a16d2e7409321896eb55390b4a7a02be3:ohmyzsh/.zshrc
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
