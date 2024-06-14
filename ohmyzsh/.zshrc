@@ -8,6 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Autostart Tmux
+export ZSH_TMUX_AUTOSTART=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -77,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-history-substring-search z zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-history-substring-search z zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
 
