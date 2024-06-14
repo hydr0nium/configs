@@ -7,10 +7,8 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-<<<<<<< HEAD:zshrc/.zshrc
 # Auto start TMUX
-#ZSH_TMUX_AUTOSTART=true
-=======
+ZSH_TMUX_AUTOSTART=true
 
 # Autostart Tmux
 export ZSH_TMUX_AUTOSTART=true
