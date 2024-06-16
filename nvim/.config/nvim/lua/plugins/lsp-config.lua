@@ -20,6 +20,9 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.jedi_language_server.setup({capabilities = capabilities})
 			lspconfig.lua_ls.setup({capabilities = capabilities})
+			lspconfig.html.setup({capabilities = capabilities})
+			lspconfig.bashls.setup({capabilities = capabilities})
+			lspconfig.dockerls.setup({capabilities = capabilities})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, {})
 		end
