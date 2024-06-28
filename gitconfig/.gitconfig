@@ -1,0 +1,9 @@
+[user]
+	email = 37932436+hydr0nium@users.noreply.github.com 
+	name = Sol
+[merge]
+	tool = nvimdiff2
+[push]
+	autoSetupRemote = true
+[mergetool]
+	keepBackup = false
