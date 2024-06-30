@@ -1,4 +1,5 @@
-
+# Change language of nvim
+vim.api.nvim_exec('language en_US', true)
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
