@@ -13,4 +13,4 @@
 	keepBackup = false
 [gpg]
 	mode = ssh
-	format = ss
+	format = ssh
