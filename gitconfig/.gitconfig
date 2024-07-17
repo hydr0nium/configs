@@ -11,3 +11,5 @@
 	autoSetupRemote = true
 [mergetool]
 	keepBackup = false
+[gpg]
+	mode = ssh
