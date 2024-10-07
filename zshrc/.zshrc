@@ -109,10 +109,8 @@ source <(fzf --zsh)
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias john="~/git/john/run/john"
+# ------------------ Aliases -----------------
+alias iplist="ip a | grep inet"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -120,5 +118,6 @@ alias john="~/git/john/run/john"
 
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export export PATH=/usr/lib/qt6/bin:$PATH
-
+export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
+export PATH=/var/lib/snapd/snap/bin:$PATH 
 
