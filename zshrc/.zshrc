@@ -111,7 +111,7 @@ source <(fzf --zsh)
 #
 # ------------------ Aliases -----------------
 alias iplist="ip a | grep inet"
-
+alias xclip="xclip -selection clipboard"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -120,4 +120,9 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export export PATH=/usr/lib/qt6/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
 export PATH=/var/lib/snapd/snap/bin:$PATH 
+export GEM_HOME=$HOME/.gem
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
