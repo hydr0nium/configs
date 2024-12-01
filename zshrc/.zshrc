@@ -121,6 +121,11 @@ export export PATH=/usr/lib/qt6/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
 export PATH=/var/lib/snapd/snap/bin:$PATH 
 export GEM_HOME=$HOME/.gem
+export PATH=/home/sol/.nimble/bin:$PATH
+
+# Add zfunc for poetry
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
