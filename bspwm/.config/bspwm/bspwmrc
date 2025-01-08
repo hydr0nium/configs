@@ -1,11 +1,11 @@
 #!/bin/bash
  
 xsetroot -cursor_name left_ptr
-sxhkd &
-xrandr --output edP-1 --mode 1920x1080
-feh --bg-scale /usr/share/wallpapers/North/contents/images_dark/5120x2880.png
-#trayer --edge top --align right --widthtype request --height 22 --transparent true --alpha 0 --tint 0x000000 --height 24
-polybar example &
+sxhkd & # Shortcuts
+xrandr --output edP-1 --mode 1920x1080 # Screen Options
+feh --bg-scale /usr/share/wallpapers/North/contents/images_dark/5120x2880.png # Background Image
+polybar example & # Top bar
+dunst & # Starting notification daemon
 
 bspc monitor -d I II III IV V
  
