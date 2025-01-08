@@ -5,7 +5,7 @@ sxhkd &
 
 bspc monitor -d I II III IV V
  
-bspc config border_width	2
+bspc config border_width	3
 bspc config window_gap		0
  
 bspc config split_ratio		0.60
@@ -13,8 +13,8 @@ bspc config split_ratio		0.60
 bspc config pointer_modifier	mod4
 
 bspc config pointer_action1 resize_side
-bspc config pointer_action1 move
-bspc config pointer_action1 resize_corner
+bspc config pointer_action3 move
+#bspc config pointer_actioni resize_corner
 
 bspc config automatic_scheme alternate	
 
@@ -22,4 +22,4 @@ bspc rule -a krunner state=floating
 bspc rule -a discord desktop=2 state=floating
 bspc rule -a dolphin state=floating
 bspc rule -a rustdesk desktop=3 state=floating
-
+bspc rule -a "KeePassXC" state=floating
