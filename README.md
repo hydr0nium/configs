@@ -1,9 +1,17 @@
 # Config / dotfile repo
+
 This repo stores all of my config and dotfiles.
 
 # Dependencies
+
 - All dependencies of the respective tools
 - [stow](https://www.gnu.org/software/stow/manual/stow.html) (`sudo pacman -S stow` or `sudo apt install stow`)
+- bspwm:
+  - polybar
+  - feh
+  - rofi
+  - xrandr
+  - sxkhd
 
 # Installation
 
@@ -14,12 +22,13 @@ This repo stores all of my config and dotfiles.
 Replace <package> with one or multiple (space seperated) folders in the base repo directory
 
 # Example
+
 To install `tmux` type:
 
 `stow --target=$HOME tmux`
 
 # Issues:
+
 - Tmux is not working:
 
   Tmux needs to install [tpm](https://github.com/tmux-plugins/tpm) and other plugins. Run `Ctrl-S + I` to install all plugins.
-

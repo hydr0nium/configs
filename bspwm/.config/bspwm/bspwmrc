@@ -2,6 +2,10 @@
  
 xsetroot -cursor_name left_ptr
 sxhkd &
+xrandr --output edP-1 --mode 1920x1080
+feh --bg-scale /usr/share/wallpapers/North/contents/images_dark/5120x2880.png
+#trayer --edge top --align right --widthtype request --height 22 --transparent true --alpha 0 --tint 0x000000 --height 24
+polybar example &
 
 bspc monitor -d I II III IV V
  
@@ -19,7 +23,7 @@ bspc config pointer_action3 move
 bspc config automatic_scheme alternate	
 
 bspc rule -a krunner state=floating
-bspc rule -a discord desktop=2 state=floating
+bspc rule -a discord desktop='^2' state=floating
 bspc rule -a dolphin state=floating
-bspc rule -a rustdesk desktop=3 state=floating
+bspc rule -a rustdesk desktop='^2' state=floating
 bspc rule -a "KeePassXC" state=floating
