@@ -1,0 +1,29 @@
+# make sxhkd reload its configuration files
+super + Escape
+	pkill -USR1 -x sxhkd
+ 
+# restart bspwm
+super + shift + r
+	bspc wm -r
+ 
+# close a window
+super + q
+	bspc node -c
+
+# Switch between fullscreen
+super + m
+  bspc node -t '~fullscreen'
+
+# Switch between windows
+alt + Tab
+	bspc node -f last.!hidden.!same_class.window
+
+# Next / Previous desktop
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+# Send application to next / last desktop
+
+super + shift + {Left,Right}
+	bspc node -d {prev,next}.local --follow
+

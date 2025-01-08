@@ -117,11 +117,12 @@ alias xclip="xclip -selection clipboard"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-export export PATH=/usr/lib/qt6/bin:$PATH
-export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
-export PATH=/var/lib/snapd/snap/bin:$PATH 
+export export PATH=$PATH:/usr/lib/qt6/bin
+export PATH=$PATH:$HOME/.local/share/gem/ruby/3.2.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/3.3.0/bin
+export PATH=$PATH:/var/lib/snapd/snap/bin 
 export GEM_HOME=$HOME/.gem
-export PATH=/home/sol/.nimble/bin:$PATH
+export PATH=$PATH:/home/sol/.nimble/bin
 
 # Add zfunc for poetry
 fpath+=~/.zfunc
