@@ -42,3 +42,15 @@ ctrl + Return
 # Lock screen
 super + l
 	betterlockscreen --lock --off 5 blur &
+
+# Fn Audio +/-
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%
+
+# Mute/Unmute volume
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Open btop taskmanager
+ctrl + Escape 
+	alacritty -o window.dimensions.columns=80 -o window.dimensions.lines=24 -o window.opacity=1.0 --class alacritty_taskmanager -e btop

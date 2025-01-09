@@ -4,8 +4,10 @@ xsetroot -cursor_name left_ptr
 sxhkd & # Shortcuts
 xrandr --output edP-1 --mode 1920x1080 # Screen Options
 feh --bg-scale /usr/share/wallpapers/North/contents/images_dark/5120x2880.png # Background Image
+#trayer --edge top --align right --widthtype request --height 20 --iconspacing 4 --padding 5 --SetDockType true --SetPartialStrut true &
 polybar example & # Top bar
 dunst & # Starting notification daemon
+picom & # Compositor
 
 bspc monitor -d I II III IV V
  
@@ -27,3 +29,4 @@ bspc rule -a discord desktop='^2' state=floating
 bspc rule -a dolphin state=floating
 bspc rule -a rustdesk desktop='^2' state=floating
 bspc rule -a "KeePassXC" state=floating
+bspc rule -a alacritty_taskmanager state=floating sticky=on
