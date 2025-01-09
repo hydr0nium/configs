@@ -12,6 +12,9 @@ This repo stores all of my config and dotfiles.
   - rofi
   - xrandr
   - sxkhd
+  - xautolock (Remember to change the suspend then hibernate time in /etc/systemd/sleep.conf
+  - picom
+  - setxkbmap
 
 # Installation
 
