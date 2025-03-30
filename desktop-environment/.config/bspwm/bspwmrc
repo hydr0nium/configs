@@ -8,15 +8,16 @@ feh --bg-scale ~/Pictures/wallpaper/nightsky.jpg # Background Image
 polybar example & # Top bar
 dunst & # Starting notification daemon
 picom & # Compositor
+/home/sol/.config/bspwm/autostart.sh
 setxkbmap de
 
 
 bspc monitor -d I II III IV V
  
-bspc config border_width	3
-bspc config window_gap		0
+bspc config border_width	1
+bspc config window_gap		5
  
-bspc config split_ratio		0.60
+bspc config split_ratio		0.50
 #bspc config focus_follows_pointer	true
 bspc config pointer_modifier	mod4
 
@@ -27,9 +28,14 @@ bspc config pointer_action3 move
 bspc config automatic_scheme alternate	
 
 bspc rule -a krunner state=floating
-bspc rule -a discord desktop='^2' state=floating
+bspc rule -a discord state=floating
 bspc rule -a dolphin state=floating
-bspc rule -a rustdesk desktop='^2' state=floating
+bspc rule -a Thunar state=floating
+bspc rule -a rustdesk state=floating
 bspc rule -a "KeePassXC" state=floating
 bspc rule -a alacritty_taskmanager state=floating
-bspc rule -a alacritty_mixer state=floating
+bspc rule -a pavucontrol state=floating
+bspc rule -a Shutter state=floating
+bspc rule -a xfreerdp state=floating
+bspc rule -a "qemu-system-x86_64" state=tiled
+

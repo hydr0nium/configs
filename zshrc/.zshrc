@@ -112,6 +112,9 @@ source <(fzf --zsh)
 # ------------------ Aliases -----------------
 alias iplist="ip a | grep inet"
 alias xclip="xclip -selection clipboard"
+alias getssh="cp ~/ctf/sshctf* ."
+alias httpserver="python3 -m http.server"
+alias start-windows="quickemu --vm windows-10.conf --fullscreen"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -57,3 +57,6 @@ ctrl + Escape
 # Change keyboard layout using rofi
 super + space
     ~/.config/sxhkd/change_layout.sh
+# Take a screenshot
+Print
+	shutter -s

@@ -15,7 +15,7 @@ This repo stores all of my config and dotfiles.
   - xautolock (Remember to change the suspend then hibernate time in /etc/systemd/sleep.conf
   - picom
   - setxkbmap
-  - pavucontrol-qt
+  - pavucontrol
   - btop
 
 # Installation

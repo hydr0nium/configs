@@ -17,7 +17,7 @@ y = 10
 
 [general]
 
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = ["~/.config/alacritty/themes/themes/mmaterial_theme.toml"]
 
 [terminal]
 shell = "/bin/zsh"
