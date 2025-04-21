@@ -3,3 +3,4 @@
 keepassxc &
 discord &
 nextcloud &
+rustdesk --tray &

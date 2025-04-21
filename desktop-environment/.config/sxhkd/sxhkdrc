@@ -28,7 +28,7 @@ ctrl + alt + t
 
 # Start browser (Brave)
 super + b
-	brave &
+	vivaldi &
 
 # Send application to next / last desktop
 super + shift + {Left,Right}
