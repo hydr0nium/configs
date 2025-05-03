@@ -10,3 +10,5 @@ require("lsp.init")
 require("config.lazy")
 
 require("colorschema")
+
+require("keybinds")

@@ -13,6 +13,7 @@ return {
             "html",
             "dockerls",
             "pylsp",
+            "lua_ls",
             "docker_compose_language_service",
             "jedi_language_server"
           }
@@ -28,6 +29,7 @@ return {
         
             lspconfig['pylsp'].setup({ capabilities = capabilities })
             lspconfig['jedi_language_server'].setup({ capabilities = capabilities })
+            lspconfig['lua_ls'].setup({ capabilities = capabilities})
         end
     }
 }
