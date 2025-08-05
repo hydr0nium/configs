@@ -10,13 +10,13 @@ super + shift + r
 super + q
 	bspc node -c
 
+alt + Tab
+	rofi -kb-element-next 'Tab' -modi "window" -show window
+
 # Switch between fullscreen
 super + m
   bspc node -t '~fullscreen'
 
-# Switch between windows
-alt + Tab
-	bspc node -f last.!hidden.!same_class.window
 
 # Next / Previous desktop
 super + {Left,Right}
