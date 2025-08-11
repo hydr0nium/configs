@@ -1,5 +1,4 @@
-vim.api.nvim_exec('language en_US', true)
-
+vim.cmd("language en_US")
 -- Load options
 require("options")
 

@@ -1,10 +1,12 @@
 #!/bin/bash
  
-xsetroot -cursor_name left_ptr
+WALLPAPER=~/Pictures/wallpaper/cat.jpg
+
+xsetroot -cursor_name left_ptr &
 sxhkd & # Shortcuts
-xrandr --output edP-1 --mode 1920x1080 # Screen Options
-xautolock -time 5 -locker "/home/sol/.config/sxhkd/suspend_and_lock.sh" & # Automatic lock screen after 5 min
-feh --bg-scale ~/Pictures/wallpaper/nightsky.jpg # Background Image
+xrandr --output edP-1 --mode 1920x1080 & # Screen Options
+xautolock -time 5 -nowlocker "betterlockscreen -l dimblur -q -u $WALLPAPER" -locker "~/.config/sxhkd/lock.sh" -detectsleep -killtime 10 -killer 'systemctl hibernate' &
+feh --bg-scale $WALLPAPER # Background Image
 polybar example & # Top bar
 dunst & # Starting notification daemon
 picom & # Compositor

@@ -41,7 +41,8 @@ ctrl + Return
 
 # Lock screen
 super + l
-	~/.config/sxhkd/suspend_and_lock.sh
+	xautolock -locknow
+
 # Fn Audio +/-
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
 	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%
@@ -49,6 +50,9 @@ super + l
 # Mute/Unmute volume
 XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	brightnessctl --quiet set 3%{+,-}
 
 # Open btop taskmanager
 ctrl + Escape 
