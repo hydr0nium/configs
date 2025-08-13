@@ -17,6 +17,17 @@ This repo stores all of my config and dotfiles.
   - setxkbmap
   - pavucontrol
   - btop
+  - i3lock-color
+  - dunst 
+  - oh-my-zsh
+  - starship
+  - fzf
+  - networkmanager
+  - alacritty
+  - zsh
+
+# Hibernation 
+Enable hibernation in grub and create a mkinitcpio hook 
 
 # Installation
 

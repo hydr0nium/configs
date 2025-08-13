@@ -1,11 +1,18 @@
 #!/bin/bash
  
-WALLPAPER=~/Pictures/wallpaper/cat.jpg
+WALLPAPER=~/Pictures/wallpaper/wallpaper.png
+LOCKSCREEN=~/Pictures/wallpaper/lockscreen.png
 
 xsetroot -cursor_name left_ptr &
 sxhkd & # Shortcuts
 xrandr --output edP-1 --mode 1920x1080 & # Screen Options
-xautolock -time 5 -nowlocker "betterlockscreen -l dimblur -q -u $WALLPAPER" -locker "~/.config/sxhkd/lock.sh" -detectsleep -killtime 10 -killer 'systemctl hibernate' &
+xautolock \
+  -time 5 \
+  -nowlocker "i3lock --nofork --inside-color=ffffff00 -e -L -f -k --indicator -i $LOCKSCREEN" \
+  -locker "~/.config/sxhkd/lock.sh" \
+  -detectsleep \
+  -killtime 10 \
+  -killer 'systemctl hibernate' &
 feh --bg-scale $WALLPAPER # Background Image
 polybar example & # Top bar
 dunst & # Starting notification daemon

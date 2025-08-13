@@ -41,7 +41,7 @@ ctrl + Return
 
 # Lock screen
 super + l
-	xautolock -locknow
+  xautolock -locknow
 
 # Fn Audio +/-
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
