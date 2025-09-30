@@ -23,3 +23,7 @@ To install `tmux` type:
 
   Tmux needs to install [tpm](https://github.com/tmux-plugins/tpm) and other plugins. Run `Ctrl-S + I` to install all plugins.
 
+
+# Test:
+
+This is a test because of ssh key problems
