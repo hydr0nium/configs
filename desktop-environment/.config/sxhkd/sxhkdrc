@@ -1,0 +1,66 @@
+# make sxhkd reload its configuration files
+super + Escape
+	pkill sxhkd && sxhkd &
+ 
+# restart bspwm
+super + shift + r
+	bspc wm -r
+ 
+# close a window
+super + q
+	bspc node -c
+
+alt + Tab
+	rofi -kb-element-next 'Tab' -modi "window" -show window
+
+# Switch between fullscreen
+super + m
+  bspc node -t '~fullscreen'
+
+
+# Next / Previous desktop
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+# Start Terminal (Alacritty)
+ctrl + alt + t 
+	alacritty &
+
+# Start browser (Brave)
+super + b
+	vivaldi &
+
+# Send application to next / last desktop
+super + shift + {Left,Right}
+	bspc node -d {prev,next}.local --follow
+
+
+# Start Rofi application runner
+ctrl + Return
+	rofi -kb-element-next '' -kb-mode-next 'Tab' -modi "run,window,ssh,keys" -show run
+
+# Lock screen
+super + l
+  xautolock -locknow
+
+# Fn Audio +/-
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {-,+}1%
+
+# Mute/Unmute volume
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	brightnessctl --quiet set 3%{+,-}
+
+# Open btop taskmanager
+ctrl + Escape 
+	alacritty -o window.dimensions.columns=80 -o window.dimensions.lines=24 -o window.opacity=1.0 --class alacritty_taskmanager -e btop
+
+# Change keyboard layout using rofi
+super + space
+    ~/.config/sxhkd/change_layout.sh
+# Take a screenshot
+Print
+	shutter -s

@@ -1,13 +1,21 @@
 [init]
 	defaultBranch = main
 [status]
-	short = true
+	short = false
 [user]
 	email = 37932436+hydr0nium@users.noreply.github.com 
-	name = Sol
+	name = hydr0nium
 [merge]
 	tool = nvimdiff2
 [push]
 	autoSetupRemote = true
 [mergetool]
 	keepBackup = false
+[gpg]
+	mode = ssh
+	format = ssh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

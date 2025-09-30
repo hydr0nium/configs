@@ -1,12 +1,9 @@
 
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
-shell = "/bin/zsh"
-
 [font]
-size = 17.0
+size = 12.0
 
 [font.normal]
-family = "MesloLGS NF"
+family = "MesloLGLDZ Nerd Font Mono"
 
 
 
@@ -17,4 +14,11 @@ opacity = 0.9
 [window.padding]
 x = 10
 y = 10
+
+[general]
+
+import = ["~/.config/alacritty/themes/themes/mmaterial_theme.toml"]
+
+[terminal]
+shell = "/bin/zsh"
 
