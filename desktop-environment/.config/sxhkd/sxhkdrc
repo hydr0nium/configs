@@ -26,7 +26,7 @@ super + {Left,Right}
 ctrl + alt + t 
 	alacritty &
 
-# Start browser (Brave)
+# Start browser
 super + b
 	vivaldi &
 

@@ -3,5 +3,6 @@
 keepassxc &
 discord &
 nextcloud &
-rustdesk --tray &
+flatpak run com.rustdesk.Rustdesk --tray &
+flameshot &
 wmname LG3D &

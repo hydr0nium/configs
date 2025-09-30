@@ -106,14 +106,47 @@ source <(fzf --zsh)
 alias iplist="ip a | grep inet"
 alias xclip="xclip -selection clipboard"
 alias getssh="cp ~/ctf/sshctf* ."
-alias httpserver="python3 -m http.server"
+alias http.server="iplist && python3 -m http.server"
 alias start-windows="quickemu --vm windows-10.conf --fullscreen"
+
+
+# ----------------- Custom Functions ---------------
+initctf ()
+{
+  local ctfname=$1 
+  mkdir -p \
+    $ctfname/pwn \
+    $ctfname/crypto \
+    $ctfname/binary \
+    $ctfname/web \
+    $ctfname/misc \
+    $ctfname/rev \
+    $ctfname/forensic \
+    $ctfname/osint \
+    $ctfname/network \
+    $ctfname/stego
+}
+
+# Create the folder structure for hackthebox machines
+initbox () {
+  local machine_name=$1 
+  mkdir -p \
+    $machine_name/nmap \
+    $machine_name/exfil \
+    $machine_name/scripts 
+}
+
+
+# ----------------- Exports ------------------
 
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export PATH=$PATH:/usr/lib/qt6/bin
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.2.0/bin
 export PATH=$PATH:$HOME/.gem/ruby/3.3.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/3.4.0/bin
 export PATH=$PATH:/var/lib/snapd/snap/bin 
+export PATH=$PATH:$HOME/go/bin/
+export PATH=$PATH:$HOME/.cargo/bin/
 export GEM_HOME=$HOME/.gem
 export PATH=$PATH:/home/sol/.nimble/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
@@ -129,7 +162,19 @@ autoload -Uz compinit && compinit
 # Start Starship for a pretty terminal
 eval "$(starship init zsh)"
 
+# Start vfox
+eval "$(vfox activate zsh)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+# Created by `pipx` on 2025-09-05 17:56:59
+export PATH="$PATH:/home/sol/.local/bin"
+
+PATH="/home/sol/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/sol/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/sol/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/sol/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/sol/perl5"; export PERL_MM_OPT;

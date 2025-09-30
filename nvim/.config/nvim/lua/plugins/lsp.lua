@@ -24,12 +24,12 @@ return {
         "neovim/nvim-lspconfig",
     -- example calling setup directly for each LSP
         config = function()
-            local capabilities = require('blink.cmp').get_lsp_capabilities()
-            local lspconfig = require('lspconfig')
-        
-            lspconfig['pylsp'].setup({ capabilities = capabilities })
-            lspconfig['jedi_language_server'].setup({ capabilities = capabilities })
-            lspconfig['lua_ls'].setup({ capabilities = capabilities})
+        vim.lsp.config("*", {})
+      --      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      --    #vim.lsp.config
+        -- lspconfig['pylsp'].setup({ capabilities = capabilities })
+      --    lspconfig['jedi_language_server'].setup({ capabilities = capabilities })
+        --      lspconfig['lua_ls'].setup({ capabilities = capabilities})
         end
     }
 }

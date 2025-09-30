@@ -25,6 +25,7 @@ This repo stores all of my config and dotfiles.
   - networkmanager
   - alacritty
   - zsh
+  - rose-pine-gtk-theme-full (paru)
 
 # Hibernation 
 Enable hibernation in grub and create a mkinitcpio hook 
