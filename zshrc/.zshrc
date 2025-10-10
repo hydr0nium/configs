@@ -108,6 +108,7 @@ alias xclip="xclip -selection clipboard"
 alias getssh="cp ~/ctf/sshctf* ."
 alias http.server="iplist && python3 -m http.server"
 alias start-windows="quickemu --vm windows-10.conf --fullscreen"
+alias get-sshkeys="ln -s ~/ctf/ctf ./ctf && ln -s ~/ctf/ctf.pub ./ctf.pub"
 
 
 # ----------------- Custom Functions ---------------
