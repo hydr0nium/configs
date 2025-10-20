@@ -160,15 +160,8 @@ export QT_STYLE_OVERRIDE=Adwaita-Dark
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
-# Start Starship for a pretty terminal
-eval "$(starship init zsh)"
-
 # Start vfox
 eval "$(vfox activate zsh)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
 # Created by `pipx` on 2025-09-05 17:56:59
@@ -179,3 +172,13 @@ PERL5LIB="/home/sol/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/sol/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/sol/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/sol/perl5"; export PERL_MM_OPT;
+
+
+# Start Starship for a pretty terminal
+eval "$(starship init zsh)"
+#
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
