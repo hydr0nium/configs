@@ -12,7 +12,7 @@ xautolock \
   -locker "~/.config/sxhkd/lock.sh" \
   -detectsleep \
   -killtime 10 \
-  -killer 'systemctl hibernate' &
+  -killer 'sleep 10 && systemctl hibernate' &
 feh --bg-scale $WALLPAPER # Background Image
 polybar example & # Top bar
 dunst & # Starting notification daemon
@@ -35,6 +35,11 @@ bspc config pointer_action3 move
 #bspc config pointer_actioni resize_corner
 
 bspc config automatic_scheme alternate	
+
+# Disconnect second monitor automatically 
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+
 
 bspc rule -a krunner state=floating
 bspc rule -a discord state=floating

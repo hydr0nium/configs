@@ -63,4 +63,12 @@ super + space
     ~/.config/sxhkd/change_layout.sh
 # Take a screenshot
 Print
-	shutter -s
+	flameshot gui
+
+# hide the focused window
+super + h
+    bspc node -g hidden=on
+
+# pick a hidden window to restore, via rofi
+super + shift + h
+    ~/.config/sxhkd/show-hidden-window.sh

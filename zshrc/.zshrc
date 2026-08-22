@@ -103,12 +103,15 @@ source <(fzf --zsh)
 # For a full list of active aliases, run `alias`.
 #
 # ------------------ Aliases -----------------
+alias ip="ip -c"
 alias iplist="ip a | grep inet"
 alias xclip="xclip -selection clipboard"
 alias getssh="cp ~/ctf/sshctf* ."
 alias http.server="iplist && python3 -m http.server"
 alias start-windows="quickemu --vm windows-10.conf --fullscreen"
 alias get-sshkeys="ln -s ~/ctf/ctf ./ctf && ln -s ~/ctf/ctf.pub ./ctf.pub"
+alias mobsf="sudo docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest"
+alias open="xdg-open"
 
 
 # ----------------- Custom Functions ---------------
@@ -132,9 +135,14 @@ initctf ()
 initbox () {
   local machine_name=$1 
   mkdir -p \
-    $machine_name/nmap \
+    $machine_name/outputs \
     $machine_name/exfil \
     $machine_name/scripts 
+}
+
+pwdgen () {
+  local count=$1
+  tr -cd '[:alnum:]+_!?.-'  < /dev/urandom | fold -w$count | head -n1
 }
 
 
@@ -148,12 +156,14 @@ export PATH=$PATH:$HOME/.gem/ruby/3.4.0/bin
 export PATH=$PATH:/var/lib/snapd/snap/bin 
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.cargo/bin/
+export PATH=$PATH:$HOME/.krew/bin/
 export GEM_HOME=$HOME/.gem
 export PATH=$PATH:/home/sol/.nimble/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=Adwaita:dark 
 export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=Adwaita-Dark
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 
 # Add zfunc for poetry
@@ -176,9 +186,20 @@ PERL_MM_OPT="INSTALL_BASE=/home/sol/perl5"; export PERL_MM_OPT;
 
 # Start Starship for a pretty terminal
 eval "$(starship init zsh)"
+
+# Start navi for good cheatsheets
+eval "$(navi widget zsh)"
+
 #
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+
+# bun completions
+[ -s "/home/sol/.local/share/reflex/bun/_bun" ] && source "/home/sol/.local/share/reflex/bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.local/share/reflex/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
