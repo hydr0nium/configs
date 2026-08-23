@@ -43,7 +43,6 @@ libc_repr = repr(libc)
 from pwn import *
 
 context.terminal = ["tmux", "splitw", "-h"]
-
 %if not quiet:
 # Set up pwntools for the correct architecture
 %endif
@@ -55,7 +54,6 @@ context.update(arch='i386')
 exe = ${binary_repr}
 <% binary_repr = 'exe' %>
 %endif
-
 %if not quiet:
 # Many built-in settings can be controlled on the command-line and show up
 # in "args".  For example, to dump all data sent/received, and disable ASLR
@@ -76,17 +74,17 @@ user = args.USER or ${repr(user)}
 password = args.PASSWORD or ${repr(password)}
 %endif
 %if ssh:
+
 remote_path = ${repr(remote_path)}
 %endif
-
 %if ssh:
+
 # Connect to the remote SSH server
 shell = None
 if not args.LOCAL:
     shell = ssh(user, host, port, password)
     shell.set_working_directory(symlink=True)
 %endif
-
 %if libc:
 %if not quiet:
 # Use the specified remote libc version unless explicitly told to use the
@@ -111,8 +109,8 @@ else:
     libc = ELF(${libc_repr})
 %endif
 %endif
-
 %if host:
+
 def start_local(argv=[], *a, **kw):
     '''Execute the target binary locally'''
     if args.GDB:
@@ -135,8 +133,8 @@ def start_remote(argv=[], *a, **kw):
     return io
   %endif
 %endif
-
 %if host:
+
 def start(argv=[], *a, **kw):
     '''Start the exploit against the target.'''
     if args.LOCAL:
@@ -144,6 +142,7 @@ def start(argv=[], *a, **kw):
     else:
         return start_remote(argv, *a, **kw)
 %else:
+
 def start(argv=[], *a, **kw):
     '''Start the exploit against the target.'''
     if args.GDB:
